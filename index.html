@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Timer app</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="timer-container" id="container">
+      <!-- SCREEN -->
+      <div class="screen" id="screen">
+        <span class="digits" id="minutes">00</span>
+        <span class="colon"> : </span>
+        <span class="digits" id="seconds">00</span>
+        <span class="dot"> . </span>
+        <span class="milli" id="centiseconds">00</span>
+      </div>
+
+      <!-- Buttons UNDER each number group -->
+      <div class="round-btns">
+        <button class="round under-m1">MIN</button>
+        <button class="round under-s1">SEC</button>
+        <button class="round under-ms">Centi. <br />SEC</button>
+      </div>
+
+      <!-- Rectangle Buttons -->
+      <div class="rect-btns">
+        <div class="one">
+          <button class="rect" id="start">START</button>
+          <button class="rect" id="stop">STOP</button>
+        </div>
+        <div class="two">
+          <button class="rect" id="clear">CLEAR</button>
+        </div>
+        <div class="three">
+          <button class="rect" id="color">COLOR CHANGER</button>
+          <button class="rect" id="setTimer">SET TIMER</button>
+        </div>
+      </div>
+
+      <p class="credit">Designed by <strong>ZephyrrDevv</strong></p>
+    </div>
+
+    <!-- SECOND SCREEN (HIDDEN AT FIRST) -->
+    <div class="timer-setup" id="timerSetup">
+      <h2 style="color: white">Set Countdown Time</h2>
+      <div id="cdown" class="screen">
+        <span class="digits" id="cdMinutes">00</span>
+        <span class="colon"> : </span>
+        <span class="digits" id="cdSeconds">00</span>
+        <span class="dot"> . </span>
+        <span class="digits" id="cdCenti">00</span>
+      </div>
+      <input type="number" id="inputMin" placeholder="Minutes..." min="0" />
+      <input
+        type="number"
+        id="inputSec"
+        placeholder="Seconds..."
+        min="0"
+        max="59"
+      />
+      <div class="rect-btns">
+        <div class="four">
+          <button id="backBtn" class="rect">Back</button>
+          <button id="startCountdown" class="rect" style="font-size: 16px">
+            Start Countdown
+          </button>
+        </div>
+      </div>
+
+      <p class="credit">Designed by <strong>ZephyrrDevv</strong></p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
